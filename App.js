@@ -2,6 +2,7 @@ import React from 'react';
 import {ScrollView, SafeAreaView} from 'react-native';
 import styled from 'styled-components';
 import Card from "./components/Card";
+import Logo from './components/Logo';
 import { Ionicons } from '@expo/vector-icons';
 
 export default class App extends React.Component{
@@ -21,6 +22,11 @@ export default class App extends React.Component{
                               style={{position:"absolute", right:20, top:5}}
                           />
                       </TitleBar>
+                      <ScrollView horizontal={true} style={{flexDirection:"row", padding:20}} showsHorizontalScrollIndicator={false}>
+                          <Logo image={require('./assets/logo-framerx.png')} text="Framer X"/>
+                          <Logo image={require('./assets/logo-figma.png')} text="Figma"/>
+                          <Logo image={require('./assets/logo-sketch.png')} text="sketch"/>
+                      </ScrollView>
                       <Subtitle>Continue Learning</Subtitle>
                       <ScrollView horizontal={true} style={{paddingBottom: 30}} showsHorizontalScrollIndicator={false}>
                           <Card
@@ -83,6 +89,6 @@ const Subtitle = styled.Text`
     font-weight: 600;
     font-size: 15px;
     margin-left: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     text-transform: uppercase;
 `;
